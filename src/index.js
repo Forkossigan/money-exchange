@@ -1,10 +1,10 @@
 
 module.exports = function makeExchange(currency) {
-    arrayMoney = [];
-    var error =' {error: "You are rich, my friend! We don\'t have so much coins for exchange"} ';
-  var nul = '{}'
-    if(currency>10000){return error};
-    if(currency <= 0){return nul};
+    Money = {};
+    
+    
+    if(currency>10000){return  Money[error]="You are rich, my friend! We don't have so much coins for exchange"};
+    if(currency <= 0){return ''};
     var H = 0;
     var Q = 0;
     var D = 0;
@@ -35,12 +35,12 @@ module.exports = function makeExchange(currency) {
         P = P + 1;
         
     }
-    if(H>0){arrayMoney.push('"H":'+H)};
-    if(Q>0){arrayMoney.push('"Q":'+Q)};
-    if(D>0){arrayMoney.push('"D":'+D)};
-    if(N>0){arrayMoney.push('"N":'+N)};
-    if(P>0){arrayMoney.push('"P":'+P)};
-    return ('{'+arrayMoney+'}');
+    if(H>0){Money["H"]=H};
+    if(Q>0){Money["Q"]=Q};
+    if(D>0){Money["D"]=D};
+    if(N>0){Money["N"]=N};
+    if(P>0){Money["P"]=P};
+    return Money;
   
   
   }
